@@ -3,7 +3,11 @@ Self-Study DOC(Aranyak): https://docs.google.com/document/d/1bkljD8xENmt7mDHdkFk
 
 Comparative Toxicogenomics Database(Dr. S. M. A. Al-Mamun): http://ctdbase.org/downloads/#gd
 
+GNNS-> https://www.datacamp.com/tutorial/comprehensive-introduction-graph-neural-networks-gnns-tutorial
+
 Youtube/Video:
 #1 https://youtu.be/A6v45_C1nO8
 
 #2 https://www.youtube.com/playlist?list=PLmX8XnLr6zeH13W7G-gxFKrSZ-mP7uzlX
+
+#3 https://www.youtube.com/watch?v=pS_POUVFXvk
