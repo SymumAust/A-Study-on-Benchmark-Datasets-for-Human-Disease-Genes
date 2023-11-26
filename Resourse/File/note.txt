@@ -1,0 +1,176 @@
+SVM (Support Vector Machine):
+
+Accuracy: 60.41%
+SVM is a supervised machine learning algorithm used for classification and regression tasks. It works by finding the optimal hyperplane that best separates data points belonging to different classes.
+RF (Random Forest):
+
+Accuracy: 85.71%
+Random Forest is an ensemble learning method that operates by constructing a multitude of decision trees during training and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees.
+DT (Decision Tree):
+
+Accuracy: 72.91%
+A Decision Tree is a flowchart-like tree structure where an internal node represents a feature (or attribute), the branch represents a decision rule, and each leaf node represents the outcome. Decision trees are used for both classification and regression.
+NN (Neural Network):
+
+Accuracy: 80.65% (Note: "NN" is commonly used to represent Neural Networks)
+Neural Networks are a class of machine learning models inspired by the structure and functioning of the human brain. They consist of layers of interconnected nodes (neurons) and are capable of learning complex patterns. Neural Networks can be used for various tasks, including classification and regression.
+These accuracy values represent the performance of each model on a specific task or dataset. Higher accuracy generally indicates better performance, but it's essential to consider other metrics and factors depending on the specific requirements of your machine learning application.
+
+
+
+Importing Libraries:
+
+pandas for data manipulation.
+numpy for numerical operations.
+tensorflow for building and training neural networks.
+train_test_split from sklearn.model_selection for splitting the dataset.
+LabelEncoder from sklearn.preprocessing for encoding categorical target variable.
+accuracy_score from sklearn.metrics for evaluating model performance.
+Loading Dataset:
+
+The code loads a dataset from a CSV file named 'Supplementary 2.csv' into a pandas DataFrame (data).
+Preprocessing Data:
+
+Missing values are dropped from the dataset.
+Features (X) are created by one-hot encoding categorical columns using pd.get_dummies.
+The target variable (ASSOCIATION_CLASS) is label-encoded using LabelEncoder to convert string labels into numerical labels.
+Splitting the Dataset:
+
+The dataset is split into training and testing sets using train_test_split. 80% of the data is used for training (X_train, y_train), and 20% is used for testing (X_test, y_test).
+Neural Network Model:
+
+A simple neural network model is defined using TensorFlow and Keras.
+It has an input layer with 64 neurons and ReLU activation.
+Followed by two hidden layers with 32 and 16 neurons, respectively, and ReLU activation.
+The output layer has as many neurons as there are classes (determined by num_classes) with softmax activation for classification.
+Compiling the Model:
+
+The model is compiled with the 'adam' optimizer and 'sparse_categorical_crossentropy' loss function.
+The metric used for evaluation is accuracy.
+Training the Model:
+
+The model is trained on the training data (X_train, y_train) for 10 epochs with a batch size of 32.
+Making Predictions:
+
+Predictions are made on the testing data (X_test), and the predicted labels are obtained by selecting the index of the maximum probability using np.argmax.
+Calculating Accuracy:
+
+The accuracy of the model is calculated using the accuracy_score function from scikit-learn by comparing the predicted labels (y_pred) with the actual labels (y_test).
+Printing Accuracy:
+
+The accuracy of the model on the testing data is printed.
+Given that the accuracy is approximately 0.80 (80%), it indicates that the model performs reasonably well on the testing data. Keep in mind that the performance of the model may vary based on the specific characteristics of your dataset and the nature of the task.
+
+
+
+It looks like you've implemented a support vector machine (SVM) classifier using scikit-learn for a classification task on your dataset. Let's break down the code:
+
+Importing Libraries:
+
+pandas for data manipulation.
+train_test_split from sklearn.model_selection for splitting the dataset.
+SVC (Support Vector Classifier) from sklearn.svm for implementing the SVM algorithm.
+accuracy_score from sklearn.metrics for evaluating the model performance.
+Loading Dataset:
+
+The code loads a dataset from a CSV file named 'Supplementary 2.csv' into a pandas DataFrame (data).
+Preprocessing Data:
+
+Missing values are dropped from the dataset.
+Features (X) are created by one-hot encoding categorical columns using pd.get_dummies.
+The target variable (ASSOCIATION_CLASS) is assumed to be a categorical column.
+Splitting the Dataset:
+
+The dataset is split into training and testing sets using train_test_split. 80% of the data is used for training (X_train, y_train), and 20% is used for testing (X_test, y_test).
+Initializing the SVM Classifier:
+
+An SVM classifier is initialized with a linear kernel. You can experiment with different kernel functions (e.g., 'rbf', 'poly') to see their impact on performance.
+Training the SVM Model:
+
+The SVM model is trained on the training data (X_train, y_train) using the fit method.
+Making Predictions:
+
+Predictions are made on the testing data (X_test) using the predict method.
+Calculating Accuracy:
+
+The accuracy of the model is calculated using the accuracy_score function from scikit-learn by comparing the predicted labels (y_pred) with the actual labels (y_test).
+Printing Accuracy:
+
+The accuracy of the SVM model on the testing data is printed.
+Given that the accuracy is approximately 0.6041 (60.41%), it suggests that the SVM model performs with this level of accuracy on the provided testing data. Keep in mind that the choice of kernel, hyperparameters, and the nature of your data can significantly impact the performance of the SVM model. Consider tuning these parameters for potentially better results.
+
+
+It appears you've implemented a Random Forest classifier using scikit-learn for a classification task on your dataset. Let's break down the code:
+
+Importing Libraries:
+
+pandas for data manipulation.
+numpy for numerical operations.
+train_test_split from sklearn.model_selection for splitting the dataset.
+RandomForestClassifier from sklearn.ensemble for implementing the Random Forest algorithm.
+LabelEncoder from sklearn.preprocessing for encoding categorical target variables.
+accuracy_score from sklearn.metrics for evaluating the model performance.
+Loading Dataset:
+
+The code loads a dataset from a CSV file named 'Supplementary 2.csv' into a pandas DataFrame (data).
+Preprocessing Data:
+
+Missing values are dropped from the dataset.
+Features (X) are created by one-hot encoding categorical columns using pd.get_dummies.
+The target variable (ASSOCIATION_CLASS) is label-encoded using LabelEncoder to convert string labels into numerical labels.
+Splitting the Dataset:
+
+The dataset is split into training and testing sets using train_test_split. 80% of the data is used for training (X_train, y_train), and 20% is used for testing (X_test, y_test).
+Random Forest Model:
+
+A Random Forest classifier is defined with 100 trees (n_estimators=100) and a fixed random state for reproducibility (random_state=42).
+Training the Random Forest Model:
+
+The Random Forest model is trained on the training data (X_train, y_train) using the fit method.
+Making Predictions:
+
+Predictions are made on the testing data (X_test) using the predict method.
+Calculating Accuracy:
+
+The accuracy of the model is calculated using the accuracy_score function from scikit-learn by comparing the predicted labels (y_pred) with the actual labels (y_test).
+Printing Accuracy:
+
+The accuracy of the Random Forest model on the testing data is printed.
+Given that the accuracy is approximately 0.85 (85%), it suggests that the Random Forest model performs well on the provided testing data. Random Forest is an ensemble learning method that combines the predictions of multiple decision trees, and it's known for its robustness and ability to handle complex relationships in data. Keep in mind that the performance of the model may vary based on the specific characteristics of your dataset and the nature of the task.
+
+
+It looks like you've implemented a Decision Tree classifier using scikit-learn for a classification task on your dataset. Let's break down the code:
+
+Importing Libraries:
+
+pandas for data manipulation.
+train_test_split from sklearn.model_selection for splitting the dataset.
+DecisionTreeClassifier from sklearn.tree for implementing the Decision Tree algorithm.
+accuracy_score from sklearn.metrics for evaluating the model performance.
+Loading Dataset:
+
+The code loads a dataset from a CSV file named 'Supplementary 2.csv' into a pandas DataFrame (data).
+Preprocessing Data:
+
+Missing values are dropped from the dataset.
+Features (X) are created by one-hot encoding categorical columns using pd.get_dummies.
+The target variable (ASSOCIATION_CLASS) is assumed to be a categorical column.
+Splitting the Dataset:
+
+The dataset is split into training and testing sets using train_test_split. 80% of the data is used for training (X_train, y_train), and 20% is used for testing (X_test, y_test).
+Decision Tree Model:
+
+A Decision Tree classifier is initialized.
+Training the Decision Tree Model:
+
+The Decision Tree model is trained on the training data (X_train, y_train) using the fit method.
+Making Predictions:
+
+Predictions are made on the testing data (X_test) using the predict method.
+Calculating Accuracy:
+
+The accuracy of the model is calculated using the accuracy_score function from scikit-learn by comparing the predicted labels (y_pred) with the actual labels (y_test).
+Printing Accuracy:
+
+The accuracy of the Decision Tree model on the testing data is printed.
+Given that the accuracy is approximately 0.72 (72%), it suggests that the Decision Tree model performs reasonably well on the provided testing data. Decision Trees are known for their simplicity and interpretability. Keep in mind that the performance of the model may vary based on the specific characteristics of your dataset and the nature of the task. If higher accuracy is desired, you might consider tuning hyperparameters or exploring other algorithms, depending on your specific requirements.
