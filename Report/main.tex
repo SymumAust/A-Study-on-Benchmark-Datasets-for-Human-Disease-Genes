@@ -1,0 +1,74 @@
+\documentclass[11pt, twoside]{book}
+\usepackage{lmodern}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{multirow}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[pdfusetitle, bookmarks=true, bookmarksnumbered=true, bookmarksopen=false, breaklinks=false, pdfborder={0 0 0}, pdfborderstyle={}, backref=false, colorlinks=false]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[nottoc]{tocbibind}
+\usepackage{lmodern}
+\usepackage{quotchap}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{afterpage}
+\usepackage{palatino}
+\usepackage{tabto}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\captionsetup{compatibility=false}
+\onehalfspacing
+
+\pagestyle{headings}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\makeindex
+
+\newcommand\myemptypage{ % use this one for inserting a blank page
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-2}
+    \newpage
+}
+
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true,
+  frame=single,
+  captionpos=b,
+  language=Python % Change this to the language of your code
+}
+
+\begin{document}
+\textbf{\thispagestyle{empty}}
+
+\input{input/01_frontpage}
+\input{input/02_declaration}
+\input{input/03_approval}
+\input{input/04_dedication}
+\input{input/05_acknowledgement}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\input{input/06_abstract}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{content}
+\pagebreak{}
+
+
+\input{input/bibliography}
+
+\printindex
+\end{document}

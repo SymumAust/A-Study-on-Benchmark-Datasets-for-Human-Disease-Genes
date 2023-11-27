@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: IEEEtran.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: references.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in 35
+Warning--empty year in 35
+Warning--empty journal in 36
+Warning--empty journal in 11
+Warning--empty journal in 7
+Warning--empty journal in 8
+Warning--empty journal in 10
+Too many commas in name 1 of "Indurkhya, N., & Damerau, F.J." for entry 12
+while executing---line 2403 of file IEEEtran.bst
+Warning--empty journal in 12
+Warning--empty journal in 13
+Warning--empty journal in 14
+Warning--empty journal in 15
+Warning--empty journal in 16
+Warning--empty journal in 17
+Warning--empty journal in 18
+Warning--empty journal in 26
+Warning--empty year in 26
+Warning--empty journal in 29
+Warning--empty journal in 33
+Warning--empty year in 33
+Warning--empty journal in 34
+
+Done.
+You've used 36 entries,
+            4087 wiz_defined-function locations,
+            1015 strings with 15125 characters,
+and the built_in function-call counts, 26653 in all, are:
+= -- 2159
+> -- 766
+< -- 186
++ -- 400
+- -- 150
+* -- 1410
+:= -- 4188
+add.period$ -- 72
+call.type$ -- 36
+change.case$ -- 38
+chr.to.int$ -- 405
+cite$ -- 56
+duplicate$ -- 1912
+empty$ -- 1916
+format.name$ -- 181
+if$ -- 6068
+int.to.chr$ -- 0
+int.to.str$ -- 36
+missing$ -- 349
+newline$ -- 189
+num.names$ -- 38
+pop$ -- 832
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1997
+stack$ -- 0
+substring$ -- 1023
+swap$ -- 1575
+text.length$ -- 51
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 36
+warning$ -- 20
+while$ -- 89
+width$ -- 38
+write$ -- 429
+(There was 1 error message)
